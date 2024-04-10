@@ -3,15 +3,15 @@
 Fix the `cutestCat` function. Should return the cat with the highest `cuteness`
 rating.
 */
-
+debugger
 function cutestCat(cats) {
-  let cutest;
+  let cutest = 0;
   let i = 0;
 
   while (i < cats.length) {
     const cat = cats[i];
-    if (cat > cutest) {
-      cutest = cat.cuteness;
+    if (cat.cuteness > cutest) {
+      cutest = cats[i];
     }
     i++;
   }
@@ -25,5 +25,4 @@ const cats = [
   { name: 'Tiger', cuteness: 7 },
   { name: 'Indie', cuteness: 5 },
 ]
-debugger
 console.log(cutestCat(cats)); // { name: 'Fluffy', cuteness: 9 }
